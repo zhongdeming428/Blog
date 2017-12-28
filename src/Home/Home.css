@@ -1,0 +1,14 @@
+.Home {
+    width: 100%;
+    min-height: 45rem;
+    background-color: aliceblue;
+    padding-top: 6rem;
+}
+
+.Home-panel {
+    width: 76%;
+    min-height: 45rem;
+    position: relative;
+    left: 12%;
+    background-color: white;
+}

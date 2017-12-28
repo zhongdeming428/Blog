@@ -1,0 +1,36 @@
+.Header {
+    background-color: #1abc9c;
+    height: 6rem;
+    width: 100%;
+    color:white;
+}
+
+.Header-title {
+    font-style: italic;
+    line-height: 6rem;
+    margin-left: 6rem;
+    float: left;
+}
+
+.Header-links {
+    /* line-height: 6rem; */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1rem;
+    width: 6rem;
+    float: right;
+    margin-right: 6rem;
+}
+
+.Header-links > a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-right: 1rem;
+    float: left;
+}
+
+.active-Link {
+    color: #222222 !important;
+}
