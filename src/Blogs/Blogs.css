@@ -1,5 +1,14 @@
 .Blogs {
     width: 70%;
-    min-height: 15rem;
     background-color: aliceblue;
+}
+
+.Blogs-label {
+    border-bottom: 1px solid #f1f1f1;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    background-color: white;
 }

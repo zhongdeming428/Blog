@@ -1,0 +1,35 @@
+.Blog {
+    width: 100%;
+    /* min-height: 8rem; */
+    background-color: white;
+    border-bottom: 1px solid #f1f1f1;
+    box-sizing: border-box;
+    padding: 1rem 1rem 0.2rem 1rem ;
+}
+
+.Blog-title {
+    text-decoration: none;
+    color:black;
+    font-size: 1.3rem;
+    font-family: '微软雅黑',"Arial Narrow";
+}
+
+.Blog-title:hover {
+    color:#1abc9c;
+}
+
+.Blog-body {
+    font-size: 1.0rem;
+    color: #666;
+    margin:0.5rem 0;
+    font-family: '宋体',"Arial Narrow"
+}
+
+.Blog-info {
+    color:#c3c3c3;
+    margin: 0.5rem 0rem; 
+}
+
+.Blog-info > span {
+    margin-right: 1rem;
+}

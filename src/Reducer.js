@@ -17,11 +17,12 @@ const Reducer = combineReducers({
 });
 
 function addBlogs(blogs, action){
-    let blogsArr = [];
-    action.blogs.forEach(blog => {
-        blogsArr.push(blog);
-    });
-    return [...blogsArr]
+    // let blogsArr = [];
+    // action.blogs.forEach(blog => {
+    //     blogsArr.push(blog);
+    // });
+    // return [...blogsArr]
+    return action.blogs
 }
 
 export default Reducer;

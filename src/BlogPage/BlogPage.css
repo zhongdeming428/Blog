@@ -7,8 +7,17 @@
 
 .Home-panel {
     width: 76%;
-    min-height: 45rem;
+    /* min-height: 45rem; */
     position: relative;
     left: 12%;
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.Home-detail {
+    width:30%;
 }

@@ -1,0 +1,50 @@
+.Loading {
+    width: 14rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 2rem;
+    height: 9rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.Loading-text {
+    margin-right: 1rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    animation: loading 2s infinite;
+    animation-delay: 0.6s;
+    float: left;
+}
+
+.Loading-text:nth-child(1){
+    animation-delay: 0.2s;
+}
+
+.Loading-text:nth-child(2){
+    animation-delay: 0.4s;
+}
+
+.Loading-text:nth-child(4){
+    animation-delay: 0.8s;
+}
+
+.Loading-text:nth-child(5){
+    animation-delay: 1s;
+}
+
+@keyframes loading {
+    0% {
+        transform:translateY(0);
+        background-color:red;
+    }
+    60% {
+        transform:translateY(5rem);
+        background-color:blue;
+    }
+    100% {
+        transform:translateY(0);
+        background-color:green;
+    }
+}
