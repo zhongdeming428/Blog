@@ -6,7 +6,7 @@ import Blog from '../Blog/Blog';
 class Blogs extends React.Component {
     render(){
         return <div className="Blogs">
-            <div className="Blogs-label">全部</div>
+            <div className="Blogs-label">{this.props.currentLabel}</div>
             {
                 this.props.blogs.map(blog => {
                     return <Blog
@@ -24,7 +24,8 @@ class Blogs extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        blogs:state.blogs
+        blogs:state.showBlogs,
+        currentLabel:state.currentLabel
     };
 };
 

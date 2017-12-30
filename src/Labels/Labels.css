@@ -1,0 +1,15 @@
+.Labels {
+    width: 100%;
+    background-color: white;
+}
+
+.Labels-panel {
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.Labels-panel > ul > li {
+    border-bottom: 1px solid #f1f1f1;
+    box-sizing: border-box;
+    padding: 1rem 0;
+}

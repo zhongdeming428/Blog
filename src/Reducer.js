@@ -2,7 +2,16 @@ import { combineReducers } from 'redux';
 
 //state structure
 const state = {
+    currentLabel:'All',
     blogs:[],
+    showBlogs:[]
+};
+
+const showBlogs = (showBlogs=[], action) => {
+    switch(action.type){
+        case 'addShowBlogs':return addShowBlogs(showBlogs, action);break;
+        default : return showBlogs;
+    }
 };
 
 const blogs = (blogs=[], action) => {
@@ -12,17 +21,29 @@ const blogs = (blogs=[], action) => {
     }
 };
 
+const currentLabel = (currentLabel='All', action) => {
+    switch(action.type){
+        case 'modifyCurrentLabel': return modifyCurrentLabel(currentLabel, action);break;
+        default : return currentLabel;
+    }
+};
+
 const Reducer = combineReducers({
-    blogs
+    blogs,
+    showBlogs,
+    currentLabel
 });
 
+function modifyCurrentLabel(currentLabel, action){
+    return action.label;
+}
+
 function addBlogs(blogs, action){
-    // let blogsArr = [];
-    // action.blogs.forEach(blog => {
-    //     blogsArr.push(blog);
-    // });
-    // return [...blogsArr]
-    return action.blogs
+    return [...blogs, ...action.blogs];
+}
+
+function addShowBlogs(showBlogs, action){
+    return action.blogs;
 }
 
 export default Reducer;

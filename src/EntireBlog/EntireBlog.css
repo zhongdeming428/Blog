@@ -1,7 +1,9 @@
 .EntireBlog {
-    width: 70%;
+    width: 80%;
     box-sizing: border-box;
     padding: 1rem 2rem;
+    position: relative;
+    left: 10%;
     font-family: sans-serif;
 }
 

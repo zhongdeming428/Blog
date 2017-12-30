@@ -5,6 +5,15 @@
 html{
   font-size: 16px;
 }
+body {
+  background-color: #1abc9c
+}
 .App {
   text-align: left;
+  box-sizing: border-box;
+  padding-top: 6rem;
+}
+
+a {
+  text-decoration: none;
 }

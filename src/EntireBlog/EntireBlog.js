@@ -24,6 +24,11 @@ class EntireBlog extends React.Component {
             this.setState({display});
             document.getElementsByClassName('EntireBlog-body')[0].innerHTML = this.Converter.makeHtml(this.blog.body);
         }
+        //在展示整个完整的博客时，让博客归类信息栏宽度变为0
+        //这个处理放在componentDidMount钩子函数中，以便在刷新展示页面时
+        //博客归类信息栏会隐藏
+        let a = document.getElementsByClassName('Home-detail')[0];
+        a.style.width = '0';
     }
     componentDidUpdate(prevProps){
         if(prevProps !== this.props){

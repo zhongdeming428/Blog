@@ -3,6 +3,10 @@
     height: 6rem;
     width: 100%;
     color:white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
 }
 
 .Header-title {
@@ -12,8 +16,11 @@
     float: left;
 }
 
+.Header-title > a {
+    color:white;
+}
+
 .Header-links {
-    /* line-height: 6rem; */
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -33,4 +40,60 @@
 
 .active-Link {
     color: #222222 !important;
+}
+
+.Header-collapse {
+    height: 2rem;
+    animation: Collapse 1s;
+}
+
+.Title-collapse {
+    line-height: 2rem;
+    animation:titleCollapse 1s;
+}
+
+@keyframes titleCollapse {
+    from {
+        line-height: 6rem;
+    }
+    to {
+        line-height: 2rem;
+    }
+}
+
+.Title-display {
+    animation : titleDisplay 1s;
+    line-height: 6rem;
+}
+
+@keyframes titleDisplay {
+    from {
+        line-height: 2rem;
+    }
+    to {
+        line-height: 6rem;
+    }
+}
+
+.Header-display {
+    animation: Display 1s;
+    height: 6rem;
+}
+
+@keyframes Collapse {
+    from {
+        height: 6rem;
+    }
+    to {
+        height: 2rem;
+    }
+}
+
+@keyframes  Display {
+    from {
+        height: 2rem;
+    }
+    to {
+        height: 6rem;
+    }
 }
