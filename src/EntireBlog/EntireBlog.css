@@ -60,6 +60,23 @@
 }
 
 .EntireBlog-body > p > img {
-    max-height: 30rem;
-    max-width: 30rem;
+    width: 60%;
+    position: relative;
+    left: 20%;
+    margin: 2rem;
+}
+
+.Blog-label, .Blog-time {
+    font-size: 0.5rem;
+    font-family: '微软雅黑';
+    color: #c3c3c3;
+    margin-left: 1rem;
+}
+
+.Blog-head {
+    text-align: right;
+}
+
+.EntireBlog-title {
+    text-align: left !important;
 }
