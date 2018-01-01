@@ -11,28 +11,28 @@ import Home from './Home/Home';
 class App extends Component {
   componentWillMount() {
     const { addBlogs, addShowBlogs } = this.props;
-    // let res = Ajax({
-    //     method:'get',
-    //     url:'https://api.github.com/repos/zhongdeming428/Blog/issues'
-    // });
-    // res.then(response => {
-    //     addBlogs(response);
-    //     addShowBlogs(response);
-    // });
-    //伪造请求
     let res = Ajax({
-      method: 'get',
-      url: '../json.js',
-      headers: {
-        'content-type': 'application/json'
-      }
+        method:'get',
+        url:'https://api.github.com/repos/zhongdeming428/Blog/issues'
     });
     res.then(response => {
-      addBlogs(response);
-      if(response.length > 10){ 
-        addShowBlogs(response.slice(0,10));
-      }
+        addBlogs(response);
+        addShowBlogs(response);
     });
+    //伪造请求
+    // let res = Ajax({
+    //   method: 'get',
+    //   url: '../json.js',
+    //   headers: {
+    //     'content-type': 'application/json'
+    //   }
+    // });
+    // res.then(response => {
+    //   addBlogs(response);
+    //   if(response.length > 10){ 
+    //     addShowBlogs(response.slice(0,10));
+    //   }
+    // });
   }
   render() {
     return (
