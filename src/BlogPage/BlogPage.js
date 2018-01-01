@@ -5,16 +5,12 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import EntireBlog from '../EntireBlog/EntireBlog';
 import Labels from '../Labels/Labels';
-import ReactDOM from 'react-dom';
 
 class Home extends React.Component {
     constructor({match}){
         super();
         this.processDisplay = this.processDisplay.bind(this);
         this.match = match;
-    }
-    componentDidMount(){
-        // this.processDisplay(this.match);
     }
     componentWillReceiveProps({match}){
         this.processDisplay(match);

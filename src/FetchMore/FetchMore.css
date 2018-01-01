@@ -1,0 +1,22 @@
+.FetchMore {
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    text-align: center;
+}
+
+.FetchMore > img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.75rem;
+    animation: rotate linear 1s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

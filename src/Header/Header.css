@@ -44,12 +44,12 @@
 
 .Header-collapse {
     height: 2rem;
-    animation: Collapse 1s;
+    animation: Collapse 0.5s;
 }
 
 .Title-collapse {
     line-height: 2rem;
-    animation:titleCollapse 1s;
+    animation:titleCollapse 0.5s;
 }
 
 @keyframes titleCollapse {
@@ -62,7 +62,7 @@
 }
 
 .Title-display {
-    animation : titleDisplay 1s;
+    animation : titleDisplay 0.5s;
     line-height: 6rem;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .Header-display {
-    animation: Display 1s;
+    animation: Display 0.5s;
     height: 6rem;
 }
 

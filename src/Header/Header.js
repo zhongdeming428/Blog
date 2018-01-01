@@ -7,8 +7,8 @@ class Header extends React.Component {
         return <div className="Header">
             <h1 className="Header-title"><a href="/">ZHONGDM</a></h1>
             <div className="Header-links">
+                <NavLink to="/Home" activeClassName="active-Link">首页</NavLink>
                 <NavLink to="/Blog" activeClassName="active-Link">博客</NavLink>
-                <NavLink to="/introduction" activeClassName="active-Link">关于</NavLink>
             </div>
         </div>
     }

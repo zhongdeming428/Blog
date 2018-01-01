@@ -6,6 +6,7 @@ import Blog from './BlogPage/BlogPage';
 import { addBlogsAction, addShowBlogsAction } from './Actions';
 import Ajax from '@fdaciuk/ajax';
 import { connect } from 'react-redux';
+import Home from './Home/Home';
 
 class App extends Component {
   componentWillMount() {
@@ -28,7 +29,9 @@ class App extends Component {
     });
     res.then(response => {
       addBlogs(response);
-      addShowBlogs(response);
+      if(response.length > 10){ 
+        addShowBlogs(response.slice(0,10));
+      }
     });
   }
   render() {
@@ -38,9 +41,10 @@ class App extends Component {
           <div>
             <Header />
             <Switch>
+              <Route path="/Home" exact component={Home}/>
               <Route path="/Blog" exact component={Blog} />
               <Route path="/Blog/:id" exact component={Blog} />
-              <Route render={() => (<Redirect to="/Blog" />)} />
+              <Route render={() => (<Redirect to="/Home" />)} />
             </Switch>
           </div>
         </BrowserRouter>

@@ -3,9 +3,11 @@ import { combineReducers } from 'redux';
 //state structure
 const state = {
     currentLabel:'All',
+    shouldFetchMore:false,
     blogs:[],
     showBlogs:[]
 };
+
 
 const showBlogs = (showBlogs=[], action) => {
     switch(action.type){
@@ -28,10 +30,18 @@ const currentLabel = (currentLabel='All', action) => {
     }
 };
 
+const shouldFetchMore = (shouldFetchMore=false, action) => {
+    switch(action.type){
+        case 'toggleShouldFetchMore':return action.shouldFetchMore;break;
+        default : return shouldFetchMore;
+    }
+};
+
 const Reducer = combineReducers({
     blogs,
     showBlogs,
-    currentLabel
+    currentLabel,
+    shouldFetchMore
 });
 
 function modifyCurrentLabel(currentLabel, action){

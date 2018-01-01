@@ -1,0 +1,134 @@
+.HomePage {
+    /* min-height: 35rem; */
+    text-align: center;
+}
+
+.HomePage-header {
+    border-bottom: 1px solid #c3c3c3;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    z-index: 1000;
+}
+
+.AvatarContainer {
+    overflow: hidden;
+}
+
+.HomePage-avatar, .AvatarContainer {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 4rem;
+}
+
+.HomePage-avatar:hover {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    left: -1rem;
+    top:-1rem;
+    border-radius: 5rem;
+}
+
+.fab {
+    font-size: 2rem;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.Contact-board {
+    float: right;
+    clear: both;
+}
+
+.HomePage-body {
+    font-family: '微软雅黑';
+    color:#263238;
+    text-align: left;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    box-sizing: border-box;
+    padding: 3rem 0;
+}
+
+.HomePage-body > h1 {
+    margin-top: 2rem;
+    animation:fallIn 1s ease-in;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+}
+
+@keyframes fallIn {
+    from {
+        transform:translateX(15rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#HomePage-body-text-2{
+    animation-delay: 0.5s
+}
+#HomePage-body-text-3{
+    animation-delay: 1s
+}
+#HomePage-body-text-4{
+    animation-delay: 1.5s
+}
+#HomePage-body-text-5{
+    animation-delay: 2s
+}
+#HomePage-body-text-6{
+    animation-delay: 2.5s
+}
+#HomePage-body-text-7{
+    animation-delay: 3s
+}
+#HomePage-body-text-8{
+    animation-delay: 3.5s
+}
+#HomePage-body-text-9{
+    animation-delay: 4s
+}
+#HomePage-body-text-10{
+    animation-delay: 4.5s
+}
+#HomePage-body-text-11{
+    animation-delay: 5s
+}
+#HomePage-body-text-12{
+    animation-delay: 5.5s
+}
+#HomePage-body-text-13{
+    animation-delay: 6s
+}
+#HomePage-body-text-14{
+    animation-delay: 6.5s
+}
+
+.HomePage-footer {
+    width: 100%;
+    height: 15rem;
+    background-color: #263238;
+    color:white;
+    position: relative;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.HomePage-footer a {
+    color:yellow;
+}
+
+#QRCode {
+    width: 8rem;
+    height: 8rem;
+}
+
+.Contact-board > a {
+    color:darkblue;
+}

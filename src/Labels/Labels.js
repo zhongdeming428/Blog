@@ -11,6 +11,9 @@ class Labels extends React.Component {
         this.processLabels = this.processLabels.bind(this);
         this.state = {labels:[]};
     }
+    componentDidMount(){
+        this.processLabels();
+    }
     componentDidUpdate(prevProps, prevState){
         if(prevProps !== this.props){
             this.processLabels();

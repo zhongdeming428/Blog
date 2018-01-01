@@ -3,12 +3,15 @@ import './Blogs.css';
 import { connect } from 'react-redux';
 import Blog from '../Blog/Blog';
 import Loading from '../Loading/Loading';
+import FetchMore from '../FetchMore/FetchMore';
 
 class Blogs extends React.Component {
     render(){
         return <div className="Blogs">
             <div className="Blogs-label">{this.props.currentLabel}</div>
-            { this.props.blogs.length === 0 ? <Loading/> : null }
+            { 
+                this.props.blogs.length === 0 ? <Loading/> : null 
+            }
             {
                 this.props.blogs.map(blog => {
                     return <Blog
@@ -20,6 +23,9 @@ class Blogs extends React.Component {
                         blogBody={blog.body} />
                 })
             }
+            {
+                this.props.shouldFetchMore ? <FetchMore/> : null
+            }
         </div>
     }
 }
@@ -27,7 +33,8 @@ class Blogs extends React.Component {
 const mapStateToProps = (state) => {
     return {
         blogs:state.showBlogs,
-        currentLabel:state.currentLabel
+        currentLabel:state.currentLabel,
+        shouldFetchMore:state.shouldFetchMore
     };
 };
 
