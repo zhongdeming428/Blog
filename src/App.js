@@ -17,7 +17,7 @@ class App extends Component {
     });
     res.then(response => {
         addBlogs(response);
-        addShowBlogs(response);
+        addShowBlogs(response.slice(0,10));
     });
     //伪造请求
     // let res = Ajax({
