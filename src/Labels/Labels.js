@@ -36,8 +36,9 @@ class Labels extends React.Component {
     handleClick(e){
         if(e.target.innerText === 'All'){
             let blogs = this.props.blogs;
-            this.props.addShowBlogs(blogs);
+            this.props.addShowBlogs(blogs.slice(0,10));
             this.props.modifyCurrentLabel('All');
+            this.props.setIsLazyLoad(true);
             return;
         } 
         let blogs = [];
@@ -50,6 +51,7 @@ class Labels extends React.Component {
         });
         this.props.addShowBlogs(blogs);
         this.props.modifyCurrentLabel(e.target.innerText);
+        this.props.setIsLazyLoad(false);
     }
     render(){
         return <div className="Labels">
@@ -82,6 +84,12 @@ const mapDispatchToProps = (dispatch) => {
         },
         modifyCurrentLabel(label){
             dispatch(modifyCurrentLabelAction(label));
+        },
+        setIsLazyLoad(isLazyLoad){
+            dispatch({
+                type:'setIsLazyLoad',
+                isLazyLoad
+            });
         }
     };
 };

@@ -5,7 +5,8 @@ const state = {
     currentLabel:'All',
     shouldFetchMore:false,
     blogs:[],
-    showBlogs:[]
+    showBlogs:[],
+    isLazyLoad:true
 };
 
 
@@ -37,11 +38,19 @@ const shouldFetchMore = (shouldFetchMore=false, action) => {
     }
 };
 
+const isLazyLoad = (isLazyLoad=true, action) => {
+    switch(action.type){
+        case 'setIsLazyLoad':return action.isLazyLoad;break;
+        default : return isLazyLoad;
+    }
+};
+
 const Reducer = combineReducers({
     blogs,
     showBlogs,
     currentLabel,
-    shouldFetchMore
+    shouldFetchMore,
+    isLazyLoad
 });
 
 function modifyCurrentLabel(currentLabel, action){

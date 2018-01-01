@@ -30,20 +30,22 @@ window.addEventListener('scroll',()=>{
     let scrollHeight = document.body.scrollHeight;
     if(scrollTop >= scrollHeight - clientHeight){
         //此时网页到达最底部，开始自动加载更多数据
-        //将state中的标志位置位，显示FetchMore组件
-        store.dispatch({
-            type:'toggleShouldFetchMore',
-            shouldFetchMore:true
-        });
-        //给state的showBlogs数组添加新数据
-        let blogs = store.getState().blogs;
-        store.dispatch({
-            type:'addShowBlogs',
-            blogs:blogs.slice(0,++showBlogsCount)
-        });
-        store.dispatch({
-            type:'toggleShouldFetchMore',
-            shouldFetchMore:false
-        });
+        if (store.getState().isLazyLoad) {
+            //将state中的标志位置位，显示FetchMore组件
+            store.dispatch({
+                type: 'toggleShouldFetchMore',
+                shouldFetchMore: true
+            });
+            //给state的showBlogs数组添加新数据
+            let blogs = store.getState().blogs;
+            store.dispatch({
+                type: 'addShowBlogs',
+                blogs: blogs.slice(0, ++showBlogsCount)
+            });
+            store.dispatch({
+                type: 'toggleShouldFetchMore',
+                shouldFetchMore: false
+            });
+        }
     }
 });
