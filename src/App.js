@@ -19,7 +19,7 @@ class App extends Component {
         addBlogs(response);
         addShowBlogs(response.slice(0,10));
     });
-    //伪造请求
+    // 伪造请求
     // let res = Ajax({
     //   method: 'get',
     //   url: '../json.js',

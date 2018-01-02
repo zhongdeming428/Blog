@@ -19,3 +19,9 @@
 .Home-detail {
     width:29%;
 }
+
+@media screen and (max-width: 600px) {
+    .Home {
+        min-height: 70rem;
+    }
+}

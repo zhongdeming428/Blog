@@ -97,3 +97,12 @@
         height: 6rem;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .Header-title {
+        margin-left: 3rem;
+    }
+    .Header-links {
+        margin-right: 3rem;
+    }
+}

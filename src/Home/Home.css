@@ -50,6 +50,7 @@
     left: 25%;
     box-sizing: border-box;
     padding: 3rem 0;
+    overflow: hidden;
 }
 
 .HomePage-body > h1 {
@@ -131,4 +132,19 @@
 
 .Contact-board > a {
     color:darkblue;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .HomePage-header {
+        width: 90%;
+        left: 5%;
+    }
+    .HomePage-body {
+        width: 100%;
+        left: 0;
+        box-sizing: border-box;
+        padding: 5rem;
+    }
 }
