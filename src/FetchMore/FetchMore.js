@@ -4,7 +4,7 @@ import './FetchMore.css';
 class FetchMore extends React.Component {
     render(){
         return <div className="FetchMore">
-            <img src="/loading.png" alt="loading"/>
+            <img src="/Blog/pics/loading.png" alt="loading"/>
         </div>
     }
 }

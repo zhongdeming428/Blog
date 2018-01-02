@@ -23,7 +23,7 @@ class Home extends React.Component {
             tmp = <div className="HomePage">
                 <div className="HomePage-header">
                     <div className="AvatarContainer">
-                        <img className="HomePage-avatar" src="/avatar.png" alt="avatar"/>
+                        <img className="HomePage-avatar" src="/Blog/pics/avatar.png" alt="avatar"/>
                     </div>
                     <div className="Contact-board">
                         <a href="https://github.com/zhongdeming428" target="blank"><i className="fab fa-github"></i></a>
@@ -50,7 +50,7 @@ class Home extends React.Component {
                     <h1 id="HomePage-body-text-14">感谢！</h1>
                 </div>
                 <div className="HomePage-footer">
-                    <img id="QRCode" src="/WechatQRCode.png" alt="WechatQRCode"/>
+                    <img id="QRCode" src="/Blog/pics/WechatQRCode.png" alt="WechatQRCode"/>
                     <p>
                         扫码添加作者微信
                     </p>
