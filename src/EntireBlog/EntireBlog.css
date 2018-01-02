@@ -7,6 +7,13 @@
     font-family: sans-serif;
 }
 
+@media screen and (max-width: 600px) {
+    .EntireBlog {
+        width: 100%;
+        left: 0;
+    }
+}
+
 .EntireBlog-body {
     box-sizing: border-box;
     padding: 1rem 0;
