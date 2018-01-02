@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
+        <BrowserRouter basename="/Blog">
           <div>
             <Header />
             <Switch>
