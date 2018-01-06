@@ -87,3 +87,17 @@
 .EntireBlog-title {
     text-align: left !important;
 }
+
+.fa-heart {
+    color: red;
+    font-size: 1rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.fa-eye {
+    margin-left: 0.5rem;
+    display: inline-block;
+    font-size: 1rem;
+}
