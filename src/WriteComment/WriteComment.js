@@ -25,8 +25,8 @@ class WriteComment extends React.Component {
         //这里打算通过设置用户cookie来标记用户身份
         //标记用户身份后才可评论
         // console.log(window.returnCitySN);
-        this.setState({userInfo:window.returnCitySN});
-        let queryStr = 'select * from Users where ip = "' + window.returnCitySN.cip + '"';
+        this.setState({userInfo:window.userIP});
+        let queryStr = 'select * from Users where ip = "' + window.userIP.cip + '"';
         LC.Query.doCloudQuery(queryStr).then(   //查询数据库中是否有用户信息
             data => {
                 if (data.results.length > 0) {
