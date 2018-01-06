@@ -3,7 +3,8 @@ import './EntireBlog.css';
 import { connect } from 'react-redux';
 import Loading from '../Loading/Loading';
 import showdown from 'showdown';
-// import bookmark from '../bookmark.svg';
+import WriteComment from '../WriteComment/WriteComment';
+import DisplayComments from '../DisplayComments/DisplayComments';
 
 class EntireBlog extends React.Component {
     constructor({match}){
@@ -58,6 +59,8 @@ class EntireBlog extends React.Component {
         return <div className="EntireBlog">
             {this.state.display}
             <div className="EntireBlog-body"></div>
+            <WriteComment blogID={this.state.id}/>
+            <DisplayComments blogID={this.state.id}/>
         </div>
     }
 }

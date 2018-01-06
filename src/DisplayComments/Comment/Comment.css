@@ -1,0 +1,13 @@
+.Comment {
+    border-bottom: 1px solid #eaecef;
+    box-sizing: border-box;
+    padding: 1rem 0;
+}
+#comment {
+    box-sizing: border-box;
+    padding: 1rem 0;
+}
+#comment_info {
+    color: #c3c3c3;
+    text-align: right;
+}

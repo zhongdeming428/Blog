@@ -6,6 +6,7 @@
   "dependencies": {
     "@fdaciuk/ajax": "^2.3.0",
     "gh-pages": "^1.1.0",
+    "leancloud-storage": "^3.4.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",

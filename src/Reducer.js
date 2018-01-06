@@ -6,7 +6,8 @@ const state = {
     shouldFetchMore:false,
     blogs:[],
     showBlogs:[],
-    isLazyLoad:true
+    isLazyLoad:true,
+    replyAt:''
 };
 
 
@@ -45,12 +46,20 @@ const isLazyLoad = (isLazyLoad=true, action) => {
     }
 };
 
+const replyAt = (replyAt={name:'',order:''}, action) => {
+    switch(action.type){
+        case 'modifyReplyAt': return {...action.replyAt};break;
+        default : return replyAt;
+    }
+};
+
 const Reducer = combineReducers({
     blogs,
     showBlogs,
     currentLabel,
     shouldFetchMore,
-    isLazyLoad
+    isLazyLoad,
+    replyAt
 });
 
 function modifyCurrentLabel(currentLabel, action){
