@@ -151,7 +151,8 @@ class EntireBlog extends React.Component {
             this.getLCData();
             this.processData();
         }
-        if (prevState.blogInfo.like !== this.state.blogInfo.like) {
+        //防止发生无限循环调用导致call stack溢出
+        if (prevState.blogInfo !== this.state.blogInfo) {
             this.processData();
         }
     }

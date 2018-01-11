@@ -7,10 +7,14 @@ import { addBlogsAction, addShowBlogsAction } from './Actions';
 import Ajax from '@fdaciuk/ajax';
 import { connect } from 'react-redux';
 import Home from './Home/Home';
+import LC from 'leancloud-storage';
 
 class App extends Component {
   componentWillMount() {
     const { addBlogs, addShowBlogs } = this.props;
+    let appId = 'gFbGUb4swYk9TigfK0RvND8u-gzGzoHsz';
+    let appKey = 'GpeKbkVMMK5lJAPpWnTJlODu';
+    LC.init({ appId, appKey });
     let res = Ajax({
         method:'get',
         url:'https://api.github.com/repos/zhongdeming428/Blog/issues'

@@ -19,9 +19,6 @@ class WriteComment extends React.Component {
         this.commentChange = this.commentChange.bind(this);
     }
     componentDidMount(){
-        let appId = 'gFbGUb4swYk9TigfK0RvND8u-gzGzoHsz';
-        let appKey = 'GpeKbkVMMK5lJAPpWnTJlODu';
-        LC.init({appId, appKey});
         //这里打算通过设置用户cookie来标记用户身份
         //标记用户身份后才可评论
         // console.log(window.returnCitySN);

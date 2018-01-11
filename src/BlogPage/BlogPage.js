@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import EntireBlog from '../EntireBlog/EntireBlog';
 import Labels from '../Labels/Labels';
+import TotalVisit from '../TotalVisit/TotalVisit';
 
 class Home extends React.Component {
     constructor({match}){
@@ -33,6 +34,7 @@ class Home extends React.Component {
                 </Switch>
                 <div className="Home-detail">
                     <Route path="/Blog" exact component={Labels}/> 
+                    <Route path="/Blog" exact component={TotalVisit}/>
                 </div>
             </div>
         </div>
